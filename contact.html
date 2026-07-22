@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us — PricePro</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">⚡</span>PricePro</a>
+    <div class="nav-actions" style="margin-left:auto;gap:12px">
+      <button class="nav-btn theme-toggle" id="theme-toggle">🌙</button>
+      <a href="index.html" class="btn-ghost">← Back to Home</a>
+    </div>
+  </div>
+</nav>
+
+<div class="static-page">
+  <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Contact Us</span></div>
+  <h1>Contact Us</h1>
+  <p class="page-meta">We typically respond within 24 hours · Mon–Sat 10am–6pm IST</p>
+
+  <div class="contact-grid">
+    <div>
+      <div class="contact-card" style="margin-bottom:16px">
+        <div class="contact-icon">📧</div>
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">Email Support</h3>
+        <p style="font-size:14px;color:var(--text2);margin:0">support@pricepro.in<br/><span style="font-size:12px;color:var(--text3)">Response within 24 hours</span></p>
+      </div>
+      <div class="contact-card" style="margin-bottom:16px">
+        <div class="contact-icon">💬</div>
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">AI Chat (Instant)</h3>
+        <p style="font-size:14px;color:var(--text2);margin:0">Use the 💬 chat bubble on the <a href="index.html" style="color:var(--accent)">homepage</a> for instant answers about prices and deals.</p>
+      </div>
+      <div class="contact-card" style="margin-bottom:16px">
+        <div class="contact-icon">🐛</div>
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">Report Wrong Price</h3>
+        <p style="font-size:14px;color:var(--text2);margin:0">Found a price mismatch or broken link? Use the form and we'll fix it within 24 hours.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🤝</div>
+        <h3 style="font-size:16px;font-weight:700;margin-bottom:6px">Business Enquiries</h3>
+        <p style="font-size:14px;color:var(--text2);margin:0">Partnerships, affiliate programs, or media — email <strong>business@pricepro.in</strong></p>
+      </div>
+
+      <!-- FormSpree setup note -->
+      <div style="background:var(--accent-light);border:1.5px solid #bfdbfe;border-radius:12px;padding:16px;margin-top:16px;font-size:13px;color:var(--text2)">
+        💡 <strong>Enable real form submissions (free):</strong><br/>
+        1. Sign up at <a href="https://formspree.io" target="_blank" style="color:var(--accent)">formspree.io</a><br/>
+        2. Create a form → copy the form ID (e.g. <code>xpwzrqgl</code>)<br/>
+        3. Replace <code>YOUR_FORM_ID</code> in <code>contact.html</code><br/>
+        Submissions will be emailed to you instantly — no backend needed.
+      </div>
+    </div>
+
+    <div class="card contact-form">
+      <h3>Send Us a Message</h3>
+      <!-- FormSpree: replace YOUR_FORM_ID with your ID from formspree.io -->
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" name="name" id="c-name" placeholder="Venkata Pramod" required/>
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" name="email" id="c-email" placeholder="you@email.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Subject *</label>
+          <select name="subject" id="c-subject" required>
+            <option value="">Select a topic…</option>
+            <option>Wrong price shown</option>
+            <option>Broken store link</option>
+            <option>Price alert not working</option>
+            <option>Product not found</option>
+            <option>Suggest a feature</option>
+            <option>Business / Partnership</option>
+            <option>General Feedback</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message *</label>
+          <textarea name="message" id="c-message" rows="5" required
+            style="width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;color:var(--text);background:var(--bg);outline:none;resize:vertical;font-family:var(--font);transition:border-color var(--trans)"
+            placeholder="Describe your issue or feedback in detail…"></textarea>
+        </div>
+        <!-- Honeypot spam protection -->
+        <input type="text" name="_gotcha" style="display:none"/>
+        <!-- Redirect after submit -->
+        <input type="hidden" name="_next" value="https://venkatapramod206-cyber.github.io/price-radar/contact.html?sent=true"/>
+
+        <button type="submit" class="btn-primary w-full" id="c-submit">Send Message →</button>
+        <div id="c-response" style="display:none;margin-top:12px"></div>
+      </form>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;background:var(--bg2);border-radius:12px;padding:24px">
+    <h3 style="margin-bottom:16px">Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <div class="faq-q">How do I cancel a price alert?</div>
+      <div class="faq-a">Go to the <a href="alerts.html" style="color:var(--accent)">Price Alerts page</a> and click the 🗑️ delete button next to any alert.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">The price on the store is different from PricePro</div>
+      <div class="faq-a">Prices change rapidly. Always verify the final price on the store's website before purchasing. PricePro updates prices hourly but flash deals can change within minutes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">I can't find a product I'm looking for</div>
+      <div class="faq-a">Try different keywords — use the brand name, model number, or category. If still not found, use the contact form to suggest it and we'll add it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I delete my account?</div>
+      <div class="faq-a">Your account data is stored locally in your browser. You can clear it anytime by going to your browser settings → Clear Site Data. Or email us and we'll guide you.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do the coupon codes actually work?</div>
+      <div class="faq-a">The codes shown are representative of real promotional offers available at major Indian stores. Always verify at checkout — bank-specific offers may require a linked card.</div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom" style="padding:20px 24px">
+    <span>© 2025 PricePro · <a href="index.html" style="color:#94a3b8">Home</a></span>
+    <span><a href="privacy.html" style="color:#94a3b8">Privacy</a> · <a href="terms.html" style="color:#94a3b8">Terms</a></span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const s = localStorage.getItem("pp_theme") || "light";
+  document.documentElement.setAttribute("data-theme", s);
+  document.getElementById("theme-toggle").textContent = s === "dark" ? "☀️" : "🌙";
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    const c = document.documentElement.getAttribute("data-theme"), n = c === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", n); localStorage.setItem("pp_theme", n);
+    document.getElementById("theme-toggle").textContent = n === "dark" ? "☀️" : "🌙";
+  });
+  document.querySelectorAll(".faq-item").forEach(i => i.querySelector(".faq-q").addEventListener("click", () => i.classList.toggle("open")));
+  window.addEventListener("scroll", () => { document.getElementById("navbar").style.boxShadow = window.scrollY > 10 ? "0 2px 12px rgba(0,0,0,.08)" : "none"; });
+
+  // Check if redirected back after successful FormSpree submit
+  if (window.location.search.includes("sent=true")) {
+    const resp = document.getElementById("c-response");
+    resp.innerHTML = `<div class="form-success">✅ Message sent! We'll reply to your email within 24 hours. Thank you!</div>`;
+    resp.style.display = "block";
+    window.history.replaceState({}, "", window.location.pathname);
+  }
+
+  // Handle form submit — use fetch for AJAX if FormSpree configured, else show instructions
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name    = document.getElementById("c-name").value.trim();
+    const email   = document.getElementById("c-email").value.trim();
+    const subject = document.getElementById("c-subject").value;
+    const message = document.getElementById("c-message").value.trim();
+    const resp    = document.getElementById("c-response");
+    const btn     = document.getElementById("c-submit");
+
+    if (!name || !email || !subject || !message) {
+      resp.innerHTML = `<div class="form-error">⚠️ Please fill in all required fields.</div>`;
+      resp.style.display = "block"; return;
+    }
+
+    const action = form.getAttribute("action");
+    if (action.includes("YOUR_FORM_ID")) {
+      // FormSpree not configured yet — show helpful message
+      resp.innerHTML = `<div class="form-success">
+        ✅ <strong>Message received!</strong><br/>
+        <span style="font-size:13px">FormSpree is not configured yet. To enable real submissions:
+        sign up at <a href="https://formspree.io" target="_blank" style="color:var(--green)">formspree.io</a>,
+        create a form, and replace <code>YOUR_FORM_ID</code> in contact.html.</span>
+      </div>`;
+      resp.style.display = "block";
+      document.getElementById("c-name").value = "";
+      document.getElementById("c-email").value = "";
+      document.getElementById("c-subject").value = "";
+      document.getElementById("c-message").value = "";
+      return;
+    }
+
+    btn.textContent = "Sending…"; btn.disabled = true;
+    try {
+      const res = await fetch(action, {
+        method: "POST", body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+      if (res.ok) {
+        resp.innerHTML = `<div class="form-success">✅ Message sent! We'll reply to ${email} within 24 hours.</div>`;
+        form.reset();
+      } else {
+        throw new Error("Server error");
+      }
+    } catch(err) {
+      resp.innerHTML = `<div class="form-error">❌ Sending failed. Please email us directly at support@pricepro.in</div>`;
+    }
+    resp.style.display = "block"; btn.textContent = "Send Message →"; btn.disabled = false;
+  });
+});
+</script>
+</body>
+</html>

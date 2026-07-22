@@ -1,0 +1,39 @@
+{
+  "name": "PricePro — Price Comparison India",
+  "short_name": "PricePro",
+  "description": "Compare prices across 50+ Indian stores. Find the best deals on Electronics & Fashion.",
+  "start_url": "/price-radar/",
+  "scope": "/price-radar/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["shopping", "finance"],
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Products",
+      "short_name": "Search",
+      "description": "Search for the best prices",
+      "url": "/price-radar/#search-section",
+      "icons": [{ "src": "favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Price Alerts",
+      "short_name": "Alerts",
+      "description": "Manage your price alerts",
+      "url": "/price-radar/alerts.html",
+      "icons": [{ "src": "favicon.svg", "sizes": "any" }]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

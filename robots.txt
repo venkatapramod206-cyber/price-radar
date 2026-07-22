@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://venkatapramod206-cyber.github.io/price-radar/sitemap.xml
+
+# Disallow admin or private paths if any
+Disallow: /admin/

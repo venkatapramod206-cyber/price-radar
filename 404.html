@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>404 — Page Not Found · PricePro</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">⚡</span>PricePro</a>
+    <div class="nav-actions" style="margin-left:auto">
+      <button class="nav-btn theme-toggle" id="theme-toggle">🌙</button>
+    </div>
+  </div>
+</nav>
+<div class="page-404" style="padding-top:80px">
+  <div>
+    <div style="font-size:80px;margin-bottom:8px">🔍</div>
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="index.html" class="btn-primary" style="text-decoration:none;display:inline-flex;align-items:center">← Go Home</a>
+      <a href="index.html#trending-section" class="btn-ghost" style="text-decoration:none;display:inline-flex;align-items:center">🔥 View Deals</a>
+      <a href="alerts.html" class="btn-ghost" style="text-decoration:none;display:inline-flex;align-items:center">🔔 Price Alerts</a>
+    </div>
+    <div style="margin-top:40px;background:var(--bg2);border-radius:12px;padding:20px;max-width:400px;margin-left:auto;margin-right:auto">
+      <p style="font-size:14px;color:var(--text2);margin-bottom:12px">Or search for a product:</p>
+      <div style="display:flex;gap:8px">
+        <input type="text" id="err-search" placeholder="Search products…" style="flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:14px;background:var(--bg);color:var(--text);outline:none"/>
+        <button onclick="window.location.href='index.html?q='+encodeURIComponent(document.getElementById('err-search').value)" class="btn-primary" style="padding:10px 16px">Go</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const s=localStorage.getItem("pp_theme")||"light";
+  document.documentElement.setAttribute("data-theme",s);
+  document.getElementById("theme-toggle").textContent=s==="dark"?"☀️":"🌙";
+  document.getElementById("theme-toggle").addEventListener("click",()=>{
+    const c=document.documentElement.getAttribute("data-theme"),n=c==="dark"?"light":"dark";
+    document.documentElement.setAttribute("data-theme",n);localStorage.setItem("pp_theme",n);
+    document.getElementById("theme-toggle").textContent=n==="dark"?"☀️":"🌙";
+  });
+  document.getElementById("err-search").addEventListener("keydown",e=>{
+    if(e.key==="Enter") window.location.href="index.html?q="+encodeURIComponent(e.target.value);
+  });
+});
+</script>
+</body>
+</html>

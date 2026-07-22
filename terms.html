@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Terms of Service — PricePro</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-icon">⚡</span>PricePro</a>
+    <div class="nav-actions" style="margin-left:auto;gap:12px">
+      <button class="nav-btn theme-toggle" id="theme-toggle">🌙</button>
+      <a href="index.html" class="btn-ghost">← Back to Home</a>
+    </div>
+  </div>
+</nav>
+<div class="static-page">
+  <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Terms of Service</span></div>
+  <h1>Terms of Service</h1>
+  <p class="page-meta">Last updated: June 2025 · Please read carefully</p>
+  <p>By using PricePro, you agree to these Terms of Service. If you do not agree, please do not use our website.</p>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By accessing or using PricePro ("the Service"), you agree to be bound by these Terms of Service and our Privacy Policy. These terms apply to all visitors, users, and others who access the Service.</p>
+
+  <h2>2. Description of Service</h2>
+  <p>PricePro is a price comparison platform that aggregates product pricing information from various Indian e-commerce stores. We provide this information for informational and reference purposes only. We are not a retailer and do not sell products directly.</p>
+
+  <h2>3. Price Accuracy Disclaimer</h2>
+  <p><strong>Important:</strong> Prices displayed on PricePro are provided for informational purposes and may not always reflect the current price on the retailer's website. Prices can change without notice due to:</p>
+  <ul>
+    <li>Flash sales and limited-time offers</li>
+    <li>Stock availability changes</li>
+    <li>Regional pricing variations</li>
+    <li>Store-specific promotions</li>
+    <li>Technical delays in our price update system</li>
+  </ul>
+  <p>Always verify the final price on the store's website before completing your purchase. PricePro is not responsible for any discrepancies between listed and actual prices.</p>
+
+  <h2>4. Affiliate Links</h2>
+  <p>PricePro participates in affiliate marketing programs. When you click on store links and make a purchase, we may receive a commission. This does not affect the price you pay. Our affiliate relationships do not influence our editorial content or product recommendations.</p>
+
+  <h2>5. User Accounts</h2>
+  <p>When you create an account, you are responsible for:</p>
+  <ul>
+    <li>Maintaining the confidentiality of your password</li>
+    <li>All activities that occur under your account</li>
+    <li>Providing accurate and current information</li>
+    <li>Notifying us of any unauthorized use</li>
+  </ul>
+  <p>We reserve the right to terminate accounts that violate these terms.</p>
+
+  <h2>6. Prohibited Uses</h2>
+  <p>You may not use PricePro to:</p>
+  <ul>
+    <li>Scrape, crawl, or harvest data from the site without permission</li>
+    <li>Attempt to bypass any security measures</li>
+    <li>Use the site for any unlawful purpose</li>
+    <li>Transmit spam, malware, or malicious code</li>
+    <li>Impersonate any person or entity</li>
+    <li>Commercially reproduce our content without permission</li>
+  </ul>
+
+  <h2>7. Intellectual Property</h2>
+  <p>The PricePro website, including its content, features, and functionality, is owned by PricePro and protected by intellectual property laws. Product names, logos, and brands belong to their respective owners.</p>
+
+  <h2>8. Limitation of Liability</h2>
+  <p>PricePro is provided "as is" without warranties of any kind. To the maximum extent permitted by law, PricePro shall not be liable for:</p>
+  <ul>
+    <li>Any inaccuracies in pricing or product information</li>
+    <li>Any losses resulting from purchases made based on our data</li>
+    <li>Service interruptions or downtime</li>
+    <li>Third-party website content or policies</li>
+  </ul>
+
+  <h2>9. Governing Law</h2>
+  <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts of Andhra Pradesh, India.</p>
+
+  <h2>10. Changes to Terms</h2>
+  <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting. Continued use of the Service constitutes acceptance of the revised Terms.</p>
+
+  <h2>11. Contact</h2>
+  <p>For questions about these Terms, contact us at <strong>legal@pricepro.in</strong> or through our <a href="contact.html" style="color:var(--accent)">Contact page</a>.</p>
+
+  <div style="background:var(--bg2);border-radius:12px;padding:20px;margin-top:32px">
+    <p style="font-size:13px;color:var(--text3);margin:0">By using PricePro, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. Last updated June 2025.</p>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-bottom" style="padding:20px 24px">
+    <span>© 2025 PricePro · <a href="index.html" style="color:#94a3b8">Home</a></span>
+    <span><a href="privacy.html" style="color:#94a3b8">Privacy</a> · <a href="contact.html" style="color:#94a3b8">Contact</a></span>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const s=localStorage.getItem("pp_theme")||"light";
+  document.documentElement.setAttribute("data-theme",s);
+  document.getElementById("theme-toggle").textContent=s==="dark"?"☀️":"🌙";
+  document.getElementById("theme-toggle").addEventListener("click",()=>{
+    const c=document.documentElement.getAttribute("data-theme"),n=c==="dark"?"light":"dark";
+    document.documentElement.setAttribute("data-theme",n);localStorage.setItem("pp_theme",n);
+    document.getElementById("theme-toggle").textContent=n==="dark"?"☀️":"🌙";
+  });
+  window.addEventListener("scroll",()=>{document.getElementById("navbar").style.boxShadow=window.scrollY>10?"0 2px 12px rgba(0,0,0,.08)":"none";});
+});
+</script>
+</body>
+</html>
